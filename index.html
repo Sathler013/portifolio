@@ -59,7 +59,162 @@
     <footer class="rodape">
         <p>Desenvolvido por Matheus Sathler.</p>
     </footer>
-    <style></style>
+    <style>
+        /* Importando fontes do Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Krona+One&family=Montserrat:wght@400;600&display=swap');
+
+/* Variáveis de cor e fonte (facilita trocar a paleta ou tipografia depois) */
+:root {
+    --cor-primaria: #000000;     /* Fundo principal (preto) */
+    --cor-secundaria: #F6F6F6;  /* Texto claro */
+    --cor-terciaria: #22D4FD;   /* Azul de destaque */
+    --cor-hover: #272727;       /* Cor de fundo ao passar o mouse */
+
+    --fonte-primaria: 'Krona One', sans-serif;  /* Fonte usada em títulos */
+    --fonte-secundaria: 'Montserrat', sans-serif; /* Fonte usada em textos */
+}
+
+/* Resetando margens e espaçamentos padrão */
+* {
+    margin: 0;
+    padding: 0;
+}
+
+/* Configuração geral do corpo da página */
+body {
+    box-sizing: border-box; /* Inclui bordas e padding no cálculo do tamanho */
+    background-color: var(--cor-primaria); /* Fundo preto */
+    color: var(--cor-secundaria); /* Texto claro */
+}
+
+/* Cabeçalho */
+.cabecalho {
+    padding: 2% 0% 0% 15%; /* Espaço no topo e lado esquerdo */
+}
+
+/* Menu dentro do cabeçalho */
+.cabecalho__menu {
+    display: flex;
+    gap: 80px; /* Espaço entre os links */
+}
+
+/* Links do menu */
+.cabecalho__menu__link {
+    font-family: var(--fonte-secundaria);
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: var(--cor-terciaria); /* Azul */
+    text-decoration: none; /* Remove o sublinhado */
+}
+
+/* Área principal da página */
+.apresentacao {
+    padding: 5% 15%; /* Espaçamento interno */
+    display: flex;
+    align-items: center;
+    justify-content: space-between; /* Texto de um lado e imagem do outro */
+}
+
+/* Bloco de conteúdo (texto e links) */
+.apresentacao__conteudo {
+    width: 50%; /* Ocupa metade da tela */
+    display: flex;
+    flex-direction: column;
+    gap: 40px; /* Espaçamento entre os elementos */
+}
+
+/* Títulos */
+.apresentacao__conteudo__titulo {
+    font-size: 2.25rem;
+    font-family: var(--fonte-primaria);
+}
+
+/* Parte do título em destaque (azul) */
+.titulo-destaque {
+    color: var(--cor-terciaria);
+}
+
+/* Texto do conteúdo */
+.apresentacao__conteudo__texto {
+    font-size: 1.5rem;
+    font-family: var(--fonte-secundaria);
+}
+
+/* Container dos links (GitHub, LinkedIn, etc.) */
+.apresentacao__links {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    gap: 32px;
+}
+
+/* Subtítulo "Acesse minhas redes" */
+.apresentacao__links__subtitulo {
+    font-family: var(--fonte-primaria);
+    font-weight: 400;
+    font-size: 1.5rem;
+}
+
+/* Estilo dos links de redes sociais */
+.apresentacao__links__navegacao {
+    display: flex;
+    justify-content: center;
+    gap: 16px; /* Espaço entre ícone e texto */
+    border: 2px solid var(--cor-terciaria); /* Borda azul */
+    width: 50%; /* Ocupa metade do container */
+    text-align: center;
+    border-radius: 8px; /* Cantos arredondados */
+    font-size: 1.5rem;
+    font-weight: 600;
+    padding: 21.5px 0; /* Espaço interno */
+    text-decoration: none; /* Remove sublinhado */
+    color: var(--cor-secundaria); /* Texto branco */
+    font-family: var(--fonte-secundaria);
+}
+
+/* Efeito hover (quando passa o mouse por cima do link) */
+.apresentacao__links__navegacao:hover {
+    background-color: var(--cor-hover); /* Fica cinza escuro */
+}
+
+/* Imagem do lado direito */
+.apresentacao__imagem {
+    width: 50%; /* Metade da tela */
+}
+
+/* Rodapé da página */
+.rodape {
+    color: var(--cor-primaria); /* Texto preto */
+    background-color: var(--cor-terciaria); /* Fundo azul */
+    padding: 24px;
+    text-align: center;
+    font-family: var(--fonte-secundaria);
+    font-size: 1.5rem;
+    font-weight: 400;
+}
+
+/* Responsividade - quando a tela for menor que 1200px */
+@media (max-width: 1200px) {
+    .cabecalho {
+        padding: 10%; /* Mais espaço interno no cabeçalho */
+    }
+
+    .cabecalho__menu {
+        justify-content: center; /* Centraliza o menu */
+    }
+
+    .apresentacao {
+        flex-direction: column-reverse; /* Texto em cima, imagem embaixo */
+        padding: 5%;
+    }
+
+    .apresentacao__conteudo {
+        width: auto; /* Faz o texto ocupar toda a largura */
+    }
+}
+    </style>
 </body>
 </html>
+
 
